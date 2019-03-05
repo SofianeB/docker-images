@@ -9,6 +9,7 @@ RUN conda install -c conda-forge --quiet --yes \
           bottleneck \
           basemap \
           ipywidgets \
+          'tornado < 6' \
           cartopy && \
    conda clean -tipsy
 
