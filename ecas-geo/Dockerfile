@@ -1,5 +1,6 @@
 FROM jupyter/base-notebook
-
+RUN conda config --add channels conda-forge
+RUN conda config --add channels pyviz
 RUN conda install -c conda-forge --quiet --yes \
           xarray \
           dask \
@@ -13,8 +14,8 @@ RUN conda install -c conda-forge --quiet --yes \
           cartopy && \
    conda clean -tipsy
 
-#RUN conda install -c pyviz --yes \
- #         holoviews \
-  #        geoviews \
-   #       bokeh && \
-   # conda clean -tipsy
+RUN conda install -c pyviz --yes \
+          holoviews \
+          geoviews \
+          bokeh && \
+    conda clean -tipsy
