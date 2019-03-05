@@ -1,0 +1,9 @@
+language: python
+python:
+    - 3.5
+sudo: required
+services:
+    - docker
+script:
+    - set -e
+    - docker build -f ecas-geo/Dockerfile --rm --force-rm -t test-image:latest .
