@@ -13,7 +13,7 @@ RUN conda install -c conda-forge --quiet --yes \
           cartopy && \
    conda clean -tipsy
 
-RUN conda install -vvv -c pyviz --yes \
+RUN conda install -c pyviz --yes \
           holoviews \
           geoviews \
           bokeh && \
